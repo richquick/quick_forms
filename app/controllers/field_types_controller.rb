@@ -1,2 +1,0 @@
-class FieldTypesController < ApplicationController
-end
