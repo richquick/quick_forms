@@ -1,0 +1,25 @@
+<div class="section listing users">
+	<h2>Users</h2>
+	<table class="listing" summary="User list">
+		<tr>
+			<th>ID</th>
+			<th>Email</th>
+			<th>Password Hash</th>
+			<th>Active?</th>
+			<th>Acttions</th>
+		</tr>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= user.email %></td>
+			<td><%= user.password_hash %></td>
+			<td><%= user.active ? 'Yes' , 'No' %></td>
+			<td>
+				<%= link_to("Show", {:action => 'show', :id => user.id}, :class => 'action show') %>
+				<%= link_to("Edit", '#', :class => 'action edit') %>
+				<%= link_to("Delete", '#', :class => 'action delete') %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>
