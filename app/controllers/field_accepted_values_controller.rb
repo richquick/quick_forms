@@ -1,0 +1,2 @@
+class FieldAcceptedValuesController < ApplicationController
+end

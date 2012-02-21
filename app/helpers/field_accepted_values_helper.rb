@@ -1,0 +1,2 @@
+module FieldAcceptedValuesHelper
+end
