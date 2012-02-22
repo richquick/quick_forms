@@ -1,0 +1,27 @@
+<h1>User#list</h1>
+<p>Find me in app/views/user/list.html.erb</p>
+<div class="section listing users">
+	<h2>Users</h2>
+	<table class="listing" summary="User list">
+		<tr>
+			<th>ID</th>
+			<th>Email</th>
+			<th>Password Hash</th>
+			<th>Active?</th>
+			<th>Actions</th>
+		</tr>
+		<% @users.each do |user| %>
+		<tr>
+			<td><%= user.id %></td>
+			<td><%= user.email %></td>
+			<td><%= user.password %></td>
+			<td><%= user.active %></td>
+			<td>
+				<%= link_to("Show", {:action => 'show', :id => user.id}, :class => 'action show') %>
+				<%= link_to("Edit", {:action => 'edit', :id => user.id}, :class => 'action edit') %>
+				<%= link_to("Delete", {:action => 'delete', :id => user.id}, :class => 'action delete') %>
+			</td>
+		</tr>
+		<% end %>
+	</table>
+</div>

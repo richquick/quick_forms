@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-QuickForms::Application.config.secret_token = 'ec0be7ecce7059ed0cb6264fbff05adc0ebc05b33e04bf39238894721d9cfb5e4e44b88672f02dac4050563846b34c5f419b96a6c532d10dde36bd4447fd7302'
+QuickForms::Application.config.secret_token = '7b5d068f4fddbf88e3f5e9ee829ee6febced1035a8f9660e86963fbba413109f142c26088c287825ebb1a80a6a3cb574bd6166bc15c1646f0fb260fbbd9f88b2'

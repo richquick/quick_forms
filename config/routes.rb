@@ -1,4 +1,98 @@
 QuickForms::Application.routes.draw do
+  get "captcha_answer/index"
+
+  get "captcha_answer/new"
+
+  get "captcha_answer/list"
+
+  get "captcha_answer/show"
+
+  get "captcha_answer/edit"
+
+  get "captcha_answer/delete"
+
+  get "form_submission/index"
+
+  get "form_submission/new"
+
+  get "form_submission/list"
+
+  get "form_submission/show"
+
+  get "form_submission/edit"
+
+  get "form_submission/delete"
+
+  get "field_accepted_value/index"
+
+  get "field_accepted_value/new"
+
+  get "field_accepted_value/list"
+
+  get "field_accepted_value/show"
+
+  get "field_accepted_value/edit"
+
+  get "field_accepted_value/delete"
+
+  get "field_type/index"
+
+  get "field_type/new"
+
+  get "field_type/list"
+
+  get "field_type/show"
+
+  get "field_type/edit"
+
+  get "field_type/delete"
+
+  get "field/index"
+
+  get "field/new"
+
+  get "field/list"
+
+  get "field/show"
+
+  get "field/edit"
+
+  get "field/delete"
+
+  get "form/index"
+
+  get "form/new"
+
+  get "form/list"
+
+  get "form/show"
+
+  get "form/edit"
+
+  get "form/delete"
+
+  get "setting/index"
+
+  get "setting/new"
+
+  get "setting/list"
+
+  get "setting/show"
+
+  get "setting/edit"
+
+  get "setting/delete"
+
+  get "user/new"
+
+  get "user/list"
+
+  get "user/show"
+
+  get "user/edit"
+
+  get "user/delete"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,5 +148,5 @@ QuickForms::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  match ':controller(/:action(/:id))(.:format)'
 end
