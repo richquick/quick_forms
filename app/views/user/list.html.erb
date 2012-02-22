@@ -1,7 +1,14 @@
-<h1>User#list</h1>
-<p>Find me in app/views/user/list.html.erb</p>
+<%= error_messages_for(@user) %>
+
+<div><%= pluralize(@users.size, 'user') %> found</div>
+
 <div class="section listing users">
 	<h2>Users</h2>
+	
+	<%= link_to("Add New User", {:action => 'new'}, :class => 'action new') %>
+
+    <div><%= pluralize(@users.size, 'user') %> found</div>
+  
 	<table class="listing" summary="User list">
 		<tr>
 			<th>ID</th>
@@ -15,7 +22,7 @@
 			<td><%= user.id %></td>
 			<td><%= user.email %></td>
 			<td><%= user.password %></td>
-			<td><%= user.active %></td>
+			<td><%= status_tag(user.active) %></td>
 			<td>
 				<%= link_to("Show", {:action => 'show', :id => user.id}, :class => 'action show') %>
 				<%= link_to("Edit", {:action => 'edit', :id => user.id}, :class => 'action edit') %>

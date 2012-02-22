@@ -1,2 +1,17 @@
-<h1>User#new</h1>
-<p>Find me in app/views/user/new.html.erb</p>
+<%= error_messages_for(@user) %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="user new">
+  <h2>Create User</h2>
+
+  <%= form_for(:user, :url => {:action => 'create'}) do |f| %>
+  
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Create User") %>
+    </div>
+    
+  <% end %>
+</div>

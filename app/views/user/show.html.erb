@@ -1,2 +1,31 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<%= error_messages_for(@user) %>
+
+<%= link_to("<< Back to List", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="user show">
+  <h2>Show User</h2>
+
+  <table summary="user detail view">
+    <tr>
+      <th>Email</th>
+      <td><%= @user.email %></td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td><%= @user.password %></td>
+    </tr>
+    <tr>
+      <th>Active?</th>
+      <td><%= status_tag(@user.active) %></td>
+    </tr>
+    <tr>
+      <th>Created</th>
+      <td><%= @user.created_at.to_s(:long_ordinal) %></td>
+    </tr>
+    <tr>
+      <th>Updated</th>
+      <td><%= @user.updated_at.to_s(:long_ordinal) %></td>
+    </tr>
+  </table>
+  
+</div>
