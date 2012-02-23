@@ -11,7 +11,7 @@ class UserController < ApplicationController
   
   def create
     # Instantiate a new object using form parameters
-    @user = User.new(params[:subject])
+    @user = User.new(params[:user])
     # Save the object
     if @user.save
       # If save succeeds, redirect to the list action
@@ -38,7 +38,7 @@ class UserController < ApplicationController
     # Find object using form parameters
     @user = User.find(params[:id])
     # Update the object
-    if @user.update_attributes(params[:subject])
+    if @user.update_attributes(params[:user])
       # If update succeeds, redirect to the list action
       redirect_to(:action => 'show', :id => @user.id)
     else
