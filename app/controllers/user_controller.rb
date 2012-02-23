@@ -5,6 +5,8 @@ class UserController < ApplicationController
     render('list')
   end
   
+  
+  # Create
   def new
     @user = User.new
   end
@@ -22,6 +24,7 @@ class UserController < ApplicationController
     end
   end
 
+  # Read
   def list
     @users = User.order("users.id ASC")
   end
@@ -30,6 +33,7 @@ class UserController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # Update
   def edit
     @user = User.find(params[:id])
   end
@@ -47,6 +51,7 @@ class UserController < ApplicationController
     end
   end
 
+  # Delete
   def delete
     @user = User.find(params[:id])
   end
