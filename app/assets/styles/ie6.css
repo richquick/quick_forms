@@ -1,0 +1,89 @@
+/* IE6 fixes
+************************************************/
+
+.layout-3-col {
+	zoom: 1;
+}
+
+.footer div {
+	margin-bottom: 0;
+}
+
+.footer .list {
+	padding-bottom: 0;
+}
+
+.footer ul {
+    margin-left: -17px;
+    margin-right: 25px;
+}
+
+a.button:link,
+a.button:visited,
+button {
+	border: 1px solid rgb(36, 106, 202);
+    /*filter: dropshadow(color=#375f24, offx=1, offy=1);*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5082C9', endColorstr='#1A519C',GradientType=0 ); /* IE6-9 */
+    padding: 8px 22px;
+    text-decoration: none;
+}
+
+a.button:hover,
+button:hover {
+	border: 1px solid rgb(36, 106, 202);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4779C0', endColorstr='#0E458E',GradientType=0 ); /* IE6-9 */
+    padding: 8px 22px;
+    text-decoration: none;
+}
+
+a.button:active,
+button:active {
+	border: 1px solid rgb(36, 106, 202);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0E458E', endColorstr='#4779C0',GradientType=0 ); /* IE6-9 */
+    padding: 8px 22px;
+    text-decoration: none;
+}
+
+#dots-holder li a {
+	background: none;
+    background-image: url('../images/banner-dot.png');
+    display: block;
+    height: 15px;
+    width: 15px;
+}
+
+#dots-holder li.active a,
+#dots-holder li a:hover {
+	background: none;
+    background-image: url('../images/banner-dot-active.png');
+}
+
+fieldset select,
+fieldset input,
+fieldset textarea {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
+}
+
+fieldset select:focus,
+fieldset input:focus,
+fieldset textarea:focus {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFF3', endColorstr='#FFFFCF',GradientType=0 ); /* IE6-9 */
+}
+
+fieldset li {
+    margin-bottom: 22px;
+}
+
+.error .required-feedback {
+	background: url("../images/cross-white-on-red.png") no-repeat;
+	border: none;
+}
+
+.correct .required-feedback {
+	background: url("../images/tick-white-on-green.png") no-repeat;
+	border: none;
+}
+
+.input {
+	width: 290px;
+}

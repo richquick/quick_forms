@@ -1,241 +1,175 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=500" name="viewport">
+    <title>Home</title>
+    <link href="assets/default.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 6]>
+    <link href="assets/ie6.css" rel="stylesheet" type="text/css" />
+    <script src="assets/jquery.pngFix.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+    <link href="assets/ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 8]>
+    <link href="assets/ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 9]>
+    <link href="assets/ie9.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+</head>
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
+<body class="home">
+    <div id="wrapper">
+        <div class="header hcard" rel="hcard">
+            <a id="branding" href="Index.html" title="A Panels">A Panels</a>
+            <p class="address" rel="address"><span class="street-address" rel="street-address">The Albion Centre</span>, <span class="locality" rel="locality">Scotstoun</span>, <span class="region" rel="region">Glasgow</span>, <span class="postal-code" rel="postal-code">G14 0AP</span></p>
+            <p class="tel" rel="tel">
+            	<abbr title="Telephone" class="type" rel="type">Tel</span>: <span class="value" rel="value">0845 272 6357</span>
+            	<abbr title="Facsimile" class="type" rel="type">Fax</span>: <span class="value" rel="value">0141 950 4022</span>
+            </p>
+        </div>
+       
+        <div id="banner">
+           <img class="current" src="assets/massive-savings-banner.png" alt="Massive Savings" title="Massive Savings" />
+        </div>
+       
+        <div id="welcome">
+            <h1>Welcome to A Panels, the only choice...</h1>
+            <p>Established for over 20 years, A Panels has grown to be one of the <abbr title="United Kingdom">UK</abbr>’s premier suppliers of crash repair, body shop dry goods and key mechanical products.</p>
+            <a class="button" href="contact.html" title="Contact Us">Contact Us</a>
+        </div>
+       
+        <div class="section layout-3-col">
+            <div>
+                <img src="assets/delivery-vans.png" alt="Delivery Vans" title="Delivery Vans" />
+                <h2><span></span>Delivery Vans</h2>
+                <p>We have greatly increased the number of delivery vans to ensure a swift response and first class service.</p>
+                <a class="button" href="contact.html" title="Get in Touch">Get In Touch</a>
+            </div>
+            <div>
+                <img src="assets/the-albion.png" alt="The Albion" title="The Albion" />
+                <h2><span></span>The Albion</h2>
+                <p>Our call centre and stock are together in the same warehouse at The Albion Centre, our 70,000 <abbr title="Square feet">sq ft</abbr> premises in Glasgow.</p>
+                <a class="button" href="contact.html" title="Get in Touch">Get In Touch</a>
+            </div>
+            <div class="last">
+                <img src="assets/stock-holdings.png" alt="Stock Holdings" title="Stock Holdings" />
+                <h2><span></span>Stock Holdings</h2>
+                <p>Importing quality products from across the world, our stock holding has now doubled to over £500,000.</p>
+                <a class="button" href="contact.html" title="Get in Touch">Get In Touch</a>
+            </div>
+        </div>
+       
+        <div class="section layout-2-col">
+            <h2>Massive savings on car &amp; van parts</h2>
+            <ul>
+                <li>Bonnets</li>
+                <li>Bumpers</li>
+                <li>Doors</li>
+                <li>Door Skins</li>
+                <li>Front Panels</li>
+                <li>Grilles</li>
+                <li>Lighting</li>
             </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
+            <ul>
+                <li>Mirrors</li>
+                <li>Mouldings</li>
+                <li>Petrol Tanks</li>
+                <li>Radiators</li>
+                <li>Sills</li>
+                <li>Wheel Archers</li>
+                <li>Wings</li>
+            </ul>
+            <ul class="list-last">
+                <li>X-Members</li>
+                <li>Sumps</li>
+                <li>Door Mirrors</li>
+                <li>Air Con Condensers</li>
+                <li>Window Regulators</li>
+                <li>Bodyshop Consumables</li>
+                <li>Loyalty Link</li>
+            </ul>
+            <p><span class="tel" rel="tel">Call our call centre now on <span class="value" rel="value">0845 272 6357</span></span></p>
         </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
+        
+        <div class="section layout-1-col">
+            <h2>Get Directions</h2>
+               <img src="assets/get-directions-map.png" alt="Find Us" title="Find Us" />
+            <p>Visit us at our new 70,000 sq ft premises at The Albion Centre.</p>
+            <a class="button" href="contact.html" title="Find Us">Find Us</a>
         </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
+       
+        <div class="footer">
+            <div class="list">
+                <h2>Areas We Deliver To</h2>
+                <ul>
+                    <li>Glasgow</li>
+                    <li>Edinburgh</li>
+                    <li>Perth</li>
+                    <li>Stirling</li>
+                    <li>Alloa</li>
+                </ul>
+                <ul>
+                    <li>Arbroath</li>
+                    <li>Auchterarder</li>
+                    <li>Ayr</li>
+                    <li>Bearsden</li>
+                    <li>Blairgowrie</li>
+                </ul>
+                <ul>
+                    <li>Clydebank</li>
+                    <li>Crieff</li>
+                    <li>Coupar Angus</li>
+                    <li>Cumbernauld</li>
+                    <li>Cupar</li>
+                </ul>
+                <ul>
+                    <li>Dollar</li>
+                    <li>Dundee</li>
+                    <li>Dunfermline</li>
+                    <li>Falkirk</li>
+                    <li>Forfar</li>
+                </ul>
+                <ul>
+                    <li>Glenrothes</li>
+                    <li>Grangemouth</li>
+                    <li>Irvine</li>
+                    <li>Kilmarnock</li>
+                    <li>Kircaldy</li>
+                </ul>
+                <ul>
+                    <li>Kirkintilloch</li>
+                    <li>Livingston</li>
+                    <li>Milngavie</li>
+                    <li>Newburgh</li>
+                    <li>Newton Mearns</li>
+                </ul>
+                <ul>
+                    <li>Paisley</li>
+                    <li>St. Andrews</li>
+                </ul>
+            </div>
+           
+            <div id="get-in-touch">
+                <h2>Get In Touch</h2>
+	            <p class="tel" rel="tel">
+	            	<span class="type" rel="type">Tel</span>: <span class="value" rel="value">0845 272 6357</span>
+	            	<span class="type" rel="type">Fax</span>: <span class="value" rel="value">0141 950 4022</span>
+	            </p>
+            </div>
+            <p>We also supply direct to England, Wales and Northern Ireland.</p>
         </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
+       
+        <div id="copyright">
+            <span>Copyright A Panels - 2012 - All Rights Reserved</span>
+        </div>
     </div>
-  </body>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/functions.js" type="text/javascript" charset="utf-8"></script>
 </html>

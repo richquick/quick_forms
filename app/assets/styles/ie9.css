@@ -1,0 +1,56 @@
+/* IE9 fixes
+************************************************/
+
+a.button:link,
+a.button:visited,
+button {
+	border: 1px solid rgb(36, 106, 202);
+    /*filter: dropshadow(color=#375f24, offx=1, offy=1);*/
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5082C9', endColorstr='#1A519C',GradientType=0 ); /* IE6-9 */
+}
+
+a.button:hover,
+button:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4779C0', endColorstr='#0E458E',GradientType=0 ); /* IE6-9 */
+}
+
+a.button:active,
+button:active {
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0E458E', endColorstr='#4779C0',GradientType=0 ); /* IE6-9 */
+}
+
+a.button:visited {
+	border: 1px solid rgb(36, 106, 202);
+}
+
+fieldset select,
+fieldset input,
+fieldset textarea {
+/*     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 ); */
+}
+
+fieldset select:focus,
+fieldset input:focus,
+fieldset textarea:focus {
+/*     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFF3', endColorstr='#FFFFCF',GradientType=0 ); */
+}
+
+fieldset li {
+    margin-bottom: 22px;
+}
+
+form .open, .open:hover {
+/*     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFF3', endColorstr='#FFFFCF',GradientType=0 ); */
+    color: #000000;
+    outline: 3px solid rgba(51, 153, 202, 0.2);
+    z-index: 1000;
+}
+
+.select {
+/*     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 ); */
+}
+
+.select li {
+	position: relative;
+	z-index: 99999;
+}
